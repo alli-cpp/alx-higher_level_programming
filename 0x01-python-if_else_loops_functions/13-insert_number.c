@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 /**
  * insert_node - a function that inserts a node
  * @head: the head of the node
