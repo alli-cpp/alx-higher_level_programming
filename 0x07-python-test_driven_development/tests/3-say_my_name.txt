@@ -5,13 +5,8 @@ Generating Test Cases for ``3-say_my_name`` module.                =
 ====================================================================
 
 ====================================================================
-                                                                   =
-File: 3-say_my_name.txt                                            =
-Desc: This file contains most possible edge cases for the function =
-      ``say_my_name`` in the ``3-say_my_name`` module              =
-Author: Gizachew Bayness (Elec Crazy)                              =
-Date Created: Jul 24 2022                                          =
-                                                                   =
+                                                                                               =
+                                                                   
 ====================================================================
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
