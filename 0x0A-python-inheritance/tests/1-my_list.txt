@@ -1,78 +1,28 @@
->>> doc_len = __import__("1-my_list").__doc__
->>> len(doc_len) > 1
-True
+ >>> MyList = __import__('1-my_list').MyList
 
-Let's check for class docstring.
+Now use it:
 
->>> class_len = __import__("1-my_list").MyList.__doc__
->>> len(class_len) > 1
-True
+Basic MyList usage (pos, neg, zero):
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(4)
+    >>> my_list.append(3)
+    >>> my_list.append(0)
+    >>> print(my_list)
+    [-1, 4, 3, 0]
 
-Let's check for method docstring.
+Basic print_sorted usage:
+    >>> my_list.print_sorted()
+    [-1, 0, 3, 4]
 
->>> method_len = __import__("1-my_list").MyList.print_sorted.__doc__
->>> len(method_len) > 1
-True
+Big int MyList usage:
+    >>> my_list = MyList()
+    >>> my_list.append(999999999999)
+    >>> my_list.append(-1)
+    >>> my_list.append(0)
+    >>> print(my_list)
+    [999999999999, -1, 0]
 
->>> MyList = __import__('1-my_list').MyList
-
-Let's check for the correct inheritance.
-
->>> issubclass(MyList, list)
-True
-
-Let's append some elements and test the method..
-
->>> l = MyList()
->>> l.append(3)
->>> l.append(1)
->>> l.append(2)
->>> l.append(4)
->>> l.append(8)
->>> l.append(7)
->>> print(l)
-[3, 1, 2, 4, 8, 7]
-
->>> l.print_sorted()
-[1, 2, 3, 4, 7, 8]
-
-Let's test for correctly sorted list and test the method.
-
->>> h = MyList()
->>> h.append(1)
->>> h.append(2)
->>> h.append(3)
->>> print(h)
-[1, 2, 3]
-
->>> h.print_sorted()
-[1, 2, 3]
-
-Let's test for negative elements mixed with positive.
-
->>> u = MyList()
->>> u.append(-4)
->>> u.append(3)
->>> u.append(4)
->>> u.append(0)
->>> u.append(-2)
->>> u.append(-133)
->>> print(u)
-[-4, 3, 4, 0, -2, -133]
-
->>> u.print_sorted()
-[-133, -4, -2, 0, 3, 4]
-
-Let's test for empty list.
-
->>> a = MyList()
->>> print(a)
-[]
->>> a.print_sorted()
-[]
-
-Let's test the method by supplying arguments.
-
->>> a.print_sorted(87)
-Traceback (most recent call last):
-...
+Big int print_sorted usage:
+    >>> my_list.print_sorted()
+    [-1, 0, 999999999999]
