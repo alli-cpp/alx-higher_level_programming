@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Class MyList that inherits from list"""
+"""class MyList that inherits from list
+"""
 
 
 class MyList(list):
-    """prints the list sorted"""
-
+    """inherits from list"""
     def print_sorted(self):
-        """print the list sorted"""
-        new_list = self[:]
-        new_list.sort()
-        print("{}".format(new_list))
+        """prints the list, but sorted
+        (ascending sort)
+        """
+        print(sorted(self))
+
