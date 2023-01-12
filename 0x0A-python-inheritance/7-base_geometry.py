@@ -1,18 +1,29 @@
 #!/usr/bin/python3
+
 """
-function to create basegeometry
+File: 7-base_geometry.py
+Desc: This module defines an empty class.
+Author: Gizachew Bayness (Elec Crazy).
+Date Created: Aug 1 2022
 """
 
 
 class BaseGeometry:
-    """Empty class"""
+    """
+    A simple class defination.
+    """
 
     def area(self):
-        """Function not implemented"""
+        """
+        A function that raises an Exception.
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        if type(value) is not int:
+        """
+        This function validates the value.
+        """
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
