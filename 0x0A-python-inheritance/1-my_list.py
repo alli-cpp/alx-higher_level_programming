@@ -1,13 +1,24 @@
 #!/usr/bin/python3
-"""class MyList that inherits from list
+
+"""
+module contains a single class defination
+alli_sd
 """
 
 
 class MyList(list):
-    """inherits from list"""
+    """
+    A class that inherits from the list builtin class.
+    """
+    def __init__(self):
+        """
+        This method initializes the object with the
+        super class init method.
+        """
+        super().__init__()
+
     def print_sorted(self):
-        """prints the list, but sorted
-        (ascending sort)
+        """
+        This method prints the list, but sorted (ascending sort)
         """
         print(sorted(self))
-
